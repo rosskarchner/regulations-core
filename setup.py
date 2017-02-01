@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "regcore",
-    version = "1.2.1", 
+    version_format='{tag}.dev{commitcount}+{gitsha}',
     license = "public domain", 
     packages = find_packages(),
     include_package_data=True,
@@ -17,5 +17,6 @@ setup(
     classifiers=[
         'License :: Public Domain',
         'License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication'
-    ]
+    ],
+    setup_requires=['setuptools-git-version'],
 )
